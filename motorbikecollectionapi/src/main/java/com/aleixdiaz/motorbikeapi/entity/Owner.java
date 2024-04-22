@@ -3,20 +3,20 @@ package com.aleixdiaz.motorbikeapi.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "OWNER")
 public class Owner {
 
     //CONSTRUCTORS
     public Owner() {
     }
 
-    public Owner(Integer id, String name, String surname, int age, String phone, String email) {
-        this.id = id;
+    public Owner(String name, String surname, int age, long phone, String email, int collectionId) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.phone = phone;
         this.email = email;
+        this.collectionId = collectionId;
     }
 
     //ATTRIBUTES, ID WITH GENERATED SEQUENCE
@@ -34,8 +34,9 @@ public class Owner {
     private String name;
     private String surname;
     private int age;
-    private String phone;
+    private long phone;
     private String email;
+    private int collectionId;
 
 
     //GETTERS AND SETTERS
@@ -55,11 +56,11 @@ public class Owner {
         this.age = age;
     }
 
-    public String getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 
@@ -82,5 +83,9 @@ public class Owner {
     public Integer getId() {
         return id;
     }
+
+    public void setCollectionId(int collectionId) {this.collectionId = collectionId;}
+
+    public int getCollectionId() {return collectionId;}
 
 }

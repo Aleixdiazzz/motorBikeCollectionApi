@@ -3,7 +3,7 @@ package com.aleixdiaz.motorbikeapi.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "MOTORBIKE")
 public class Motorbike {
 
     //CONSTRUCTORS
@@ -11,12 +11,13 @@ public class Motorbike {
 
     }
 
-    public Motorbike(String brand, String model, int year, int horsePower, int cubicCentimeters, String owner) {
+    public Motorbike(String brand, String model, int year, int horsePower, int cubicCentimeters, String owner, int collectionId) {
         this.brand = brand;
         this.model = model;
         this.year = year;
         this.horsePower = horsePower;
         this.cubicCentimeters = cubicCentimeters;
+        this.collectionId = collectionId;
     }
 
 
