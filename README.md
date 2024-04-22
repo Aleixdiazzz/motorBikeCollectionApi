@@ -30,7 +30,7 @@ The Motorcycle Collection Management API is a Java-based web application built u
 1. **Clone the Repository**: Clone the repository to your local machine.
 2. **Configure PostgreSQL**: Set up a PostgreSQL database and configure the application.properties file with the appropriate database connection details.
 3. **Build and Run**: Build and run the application using Maven or your preferred IDE.
-4. **Explore the API**: Access the Documentation in the Documentation Folder to explore how to interact with the API endpoints.
+4. **Explore the API**: Access the documentation [here](https://github.com/Aleixdiazzz/motorBikeCollectionApi/blob/main/motorbikecollectionapi/apiDocumentation.md) to explore how to interact with the API endpoints.
 
 ## API Endpoints 📡
 The API provides the following endpoints:
