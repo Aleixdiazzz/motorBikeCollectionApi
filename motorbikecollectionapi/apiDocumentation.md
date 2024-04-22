@@ -1,7 +1,7 @@
 # Motorcycle API Documentation
 
 ## Description
-This API provides endpoints to manage motorcycle data, including adding, updating, deleting motorcycles, comparing motorcycles, and fetching collections.
+This API provides endpoints to manage motorcycle data, including adding, updating, deleting motorcycles, comparing motorcycles, managing collections and owners.
 
 ## Base URL
 The base URL for all endpoints is `http://localhost:8080/motorbikes`.
@@ -64,7 +64,7 @@ The base URL for all endpoints is `http://localhost:8080/motorbikes`.
 - **Parameters:** `collectionId` - ID of the collection to delete.
 - **Response:** Success message confirming the deletion.
 
-**Motorcycle Object Would look like this :**
+## Motorcycle Object Would look like this :
 ```Json
 {
 "brand" : "Honda",
@@ -77,16 +77,6 @@ The base URL for all endpoints is `http://localhost:8080/motorbikes`.
 ```
 
 ## Endpoints For Owner related operations:
-
-# Motorcycle Owner API Documentation
-
-## Description
-This API provides endpoints to manage motorcycle owners, including adding, updating, deleting owners, and comparing their collections.
-
-## Base URL
-The base URL for all endpoints is `http://localhost:8080/owners`.
-
-## Endpoints
 
 ### 1. Get All Owners
 - **URL:** `/`
@@ -130,7 +120,7 @@ The base URL for all endpoints is `http://localhost:8080/owners`.
 - **Parameters:** `id` - ID of the owner to delete.
 - **Response:** Success message confirming the deletion.
 
-## Example Usage
+## Owner Object Would look like this :
 ```Json
 {
     "name": "Aleix",
