@@ -4,7 +4,7 @@
 This API provides endpoints to manage motorcycle data, including adding, updating, deleting motorcycles, comparing motorcycles, managing collections and owners.
 
 ## Base URL
-The base URL for all endpoints is `http://localhost:8080/motorbikes`.
+The base URL for motorcycle endpoints is `http://localhost:8080/motorbikes` and `http://localhost:8080/owners` for owner endpoints.
 
 ## Endpoints For MotorCycle related operations:
 
