@@ -48,15 +48,13 @@ public class MotoService {
         try {
             Motorbike bikeOne = getBike(bikeOneId);
             Motorbike bikeTwo = getBike(bikeTwoId);
-            if (bikeOne.getHorsePower() > bikeTwo.getHorsePower()){
-                return (bikeOne.getModel() + " Is faster than " + bikeTwo.getModel());
-            }
-            if (bikeOne.getHorsePower() < bikeTwo.getHorsePower()){
-                return (bikeTwo.getModel() + " Is faster than " +bikeOne.getModel());
-            }
-            else {
-                return "Both bikes have the same power";
-            }
+            int bikeOneHP = bikeOne.getHorsePower();
+            int bikeTwoHP = bikeTwo.getHorsePower();
+
+            return bikeOneHP > bikeTwoHP ? bikeOne.getModel() + " is faster than " + bikeTwo.getModel() :
+                    bikeOneHP < bikeTwoHP ? bikeTwo.getModel() + " is faster than " + bikeOne.getModel() :
+                            "Both bikes have the same power";
+
         }
         catch (Exception e) {
             System.out.println(e);
