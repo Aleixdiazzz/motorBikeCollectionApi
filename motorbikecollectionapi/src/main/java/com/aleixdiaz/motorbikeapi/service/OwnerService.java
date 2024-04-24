@@ -65,7 +65,6 @@ public class OwnerService {
                 }
                 if (motorbike.getCollectionId() == ownerTwoCollectionid) {
                     ownerTwoCollectionSize++;
-                    // comment
                 }
             }
 
