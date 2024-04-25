@@ -79,7 +79,7 @@ The base URL for motorcycle endpoints is `http://localhost:8080/motorbikes` and 
 ## Endpoints For Owner related operations:
 
 ### 1. Get All Owners📋
-- **URL:** `/`
+- **URL:** `/owners`
 - **Method:** GET
 - **Description:** Retrieves a list of all owners.
 - **Response:** List of Owner objects.
