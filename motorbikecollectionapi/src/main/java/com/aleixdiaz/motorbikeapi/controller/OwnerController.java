@@ -21,7 +21,8 @@ public class OwnerController {
     @GetMapping
     public List<Owner> getAll() {return ownerService.getAllOwners();}
 
-    @GetMapping("/finById/{id}")
+    //path(?)
+    @GetMapping("/findById/{id}")
     public Owner getOwner(@PathVariable("id") int id) {
         return ownerService.findById(id);
     }

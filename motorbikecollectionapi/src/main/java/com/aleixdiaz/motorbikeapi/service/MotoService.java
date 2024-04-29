@@ -3,10 +3,12 @@ package com.aleixdiaz.motorbikeapi.service;
 import com.aleixdiaz.motorbikeapi.entity.Motorbike;
 import com.aleixdiaz.motorbikeapi.entity.Owner;
 import com.aleixdiaz.motorbikeapi.repository.MotoRepository;
+import com.sun.net.httpserver.Authenticator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -17,21 +19,7 @@ public class MotoService {
 
     //GET
     public List<Motorbike> getAll(){
-        return motoRepository.findAll();
-    }
-
-    public List<Motorbike> Aleix() {
-        try {
-            List<Motorbike> aleixsBikes = new ArrayList<Motorbike>();
-            aleixsBikes.add(new Motorbike("Honda", "VFR RC36", 1992, 120, 750, "Aleix", 1));
-            aleixsBikes.add(new Motorbike("Honda", "CRF 250L", 2017, 35, 249,"Aleix", 1));
-            aleixsBikes.add(new Motorbike("Triumph", "Bonneville", 2001, 80, 800,"Aleix", 1));
-            return aleixsBikes;
-        }
-        catch (Exception e) {
-            System.out.println(e);
-            return null;
-        }
+        return motoRepository.findAll().stream().sorted(Comparator.comparing(Motorbike::getId)).toList();
     }
 
     public Motorbike getBike(int id){
@@ -46,14 +34,8 @@ public class MotoService {
 
     public String compareBikes(int bikeOneId, int bikeTwoId){
         try {
-            Motorbike bikeOne = getBike(bikeOneId);
-            Motorbike bikeTwo = getBike(bikeTwoId);
-            int bikeOneHP = bikeOne.getHorsePower();
-            int bikeTwoHP = bikeTwo.getHorsePower();
-
-            return bikeOneHP > bikeTwoHP ? bikeOne.getModel() + " is faster than " + bikeTwo.getModel() :
-                    bikeOneHP < bikeTwoHP ? bikeTwo.getModel() + " is faster than " + bikeOne.getModel() :
-                            "Both bikes have the same power";
+            Motorbike fasterBike = motoRepository.findAll().stream().max(Comparator.comparing(Motorbike::getHorsePower)).get();
+            return fasterBike.getBrand() + " " + fasterBike.getModel() + " is the fastest bike";
 
         }
         catch (Exception e) {
@@ -87,13 +69,14 @@ public class MotoService {
     //PUT
     public Motorbike updateBike(int id, Motorbike updatedBike){
         try {
-            Motorbike oldBike = getBike(id);
-            oldBike.setBrand(updatedBike.getBrand());
-            oldBike.setModel(updatedBike.getModel());
-            oldBike.setYear(updatedBike.getYear());
-            oldBike.setHorsePower(updatedBike.getHorsePower());
-            oldBike.setCubicCentimeters(updatedBike.getCubicCentimeters());
-            return oldBike;
+            Motorbike bike = getBike(id);
+            bike.setBrand(updatedBike.getBrand());
+            bike.setModel(updatedBike.getModel());
+            bike.setYear(updatedBike.getYear());
+            bike.setHorsePower(updatedBike.getHorsePower());
+            bike.setCubicCentimeters(updatedBike.getCubicCentimeters());
+            bike.setCollectionId(updatedBike.getCollectionId());
+            return motoRepository.save(bike);
         }
         catch (Exception e) {
             System.out.println(e);

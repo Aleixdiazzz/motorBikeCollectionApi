@@ -3,8 +3,6 @@ INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, c
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (3, 'TRIUMPH', 'BONNEVILLE', 2001, 80, 800, 1);
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (4, 'SCOOTER', 'SCOOTER', 2015, 1, 125, 2);
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (5, 'No tiene', 'le dan miedo', 0, 0, 0, 3);
-INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (4, 'YAMAHA', 'YZF-R6', 2019, 120, 600, 4);
-INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (5, 'KAWASAKI', 'Ninja ZX-10R', 2018, 200, 1000, 4);
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (6, 'SUZUKI', 'GSX-R750', 2017, 150, 750, 4);
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (7, 'BMW', 'S1000RR', 2020, 207, 1000, 5);
 INSERT INTO MOTORBIKE (id, brand, model, year, horse_power, cubic_centimeters, collection_id) VALUES (8, 'DUCATI', 'Panigale V4', 2019, 214, 1103, 5);
@@ -37,4 +35,3 @@ INSERT INTO OWNER (id, name, surname, age, phone, email, collection_id) VALUES (
 INSERT INTO OWNER (id, name, surname, age, phone, email, collection_id) VALUES (8, 'Daniel', 'Cuevas', 28, 777777777, 'dcuevas@cifpfbmoll.com', 8);
 INSERT INTO OWNER (id, name, surname, age, phone, email, collection_id) VALUES (9, 'Marc', 'Cañadas', 35, 888888888, 'mcañadas@cifpfbmoll.com', 9);
 INSERT INTO OWNER (id, name, surname, age, phone, email, collection_id) VALUES (10, 'Maximo', 'Fernandez', 50, 999999999, 'mfernandez@cifpfbmoll.com', 10);
-

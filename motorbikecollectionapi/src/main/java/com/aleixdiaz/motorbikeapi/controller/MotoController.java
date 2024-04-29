@@ -21,11 +21,6 @@ public class MotoController {
 
 
     //GET
-    @GetMapping("/Aleix")
-    public List<Motorbike> Aleix(){
-        return motoService.Aleix();
-    }
-
     @GetMapping
     public List<Motorbike> getAll(){
         return motoService.getAll();
@@ -48,8 +43,7 @@ public class MotoController {
 
     //PUT
     @PutMapping("/{id}")
-    public Motorbike update(@PathVariable Integer id, @RequestBody Motorbike motorbike){return motoService.updateBike(id, motorbike);
-    }
+    public Motorbike update(@PathVariable Integer id, @RequestBody Motorbike motorbike){return motoService.updateBike(id, motorbike);}
 
     //POST
     @PostMapping
