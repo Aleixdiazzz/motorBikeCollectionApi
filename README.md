@@ -109,7 +109,7 @@ The base URL for motorcycle endpoints is `http://localhost:8080/motorbikes` and 
 "brand" : "Honda",
 "model" : "vfr",
 "year" : 1999,
-"horsePower" : 120,
+"horsePower" : 100,
 "cubicCentimeters" : 750,
 "collectionId" : 1
 }
